@@ -5,19 +5,6 @@ import { ProdutoArte } from "./src/model/ProdutoArte";
 export function main(){
 
     let produtoController = new ProdutoController();
-
-    //teste
-    let arte1 = new ProdutoArte();
-
-    arte1.numero = 1;
-    arte1.nome = "Operários";
-    arte1.preco = 7.500;
-    arte1.categoria = "Pintura a óleo";
-    arte1.artista = "Tarsila do Amaral";
-
-    arte1.visualizar();
-
-
     let opcao: number;
     let continuar: boolean = true;
 
@@ -30,6 +17,7 @@ export function main(){
         console.log("3 - Buscar Produto por Número                        ");
         console.log("4 - Atualizar Produtos                               ");
         console.log("5 - Apagar Produto                                   ");
+        console.log("6 - Buscar Produto por Artista                       ");
         console.log("0 - Sair                                             ");
         console.log("*****************************************************");
 
@@ -76,6 +64,11 @@ export function main(){
                 const numDeleta = readlinesync.questionInt("Digite o número do produto para deletar: ");
                 produtoController.deletarProduto(numDeleta);
                 
+            break;
+
+            case 6:
+                var artistaBusca = readlinesync.question("Digite o nome do artista: ");
+                produtoController.buscarPorArtista(artistaBusca);
             break;
 
             case 0:

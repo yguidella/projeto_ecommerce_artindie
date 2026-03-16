@@ -1,5 +1,7 @@
 import { Produto } from "../model/Produto";
 import { ProdutoRepository } from "../repository/ProdutoRepository";
+import { ProdutoArte } from "../model/ProdutoArte";
+
 
 export class ProdutoController implements ProdutoRepository {
 
@@ -47,5 +49,27 @@ export class ProdutoController implements ProdutoRepository {
         } else {
             console.log(`Produto com número ${numero} não encontrado.`);
         }
+    }
+
+    buscarPorArtista(artista: string): void {
+    var produtosEncontrados: ProdutoArte[] = [];
+
+    for (var i = 0; i < this.listaProdutos.length; i++) {
+        var p = this.listaProdutos[i];
+        
+        if (p instanceof ProdutoArte && p.artista.toLowerCase() === artista.toLowerCase()) {
+            produtosEncontrados.push(p as ProdutoArte);
+        }
+    }
+
+    if (produtosEncontrados.length > 0) {
+        console.log("\nProdutos do artista \"" + artista + "\":");
+        for (var j = 0; j < produtosEncontrados.length; j++) {
+
+            (produtosEncontrados[j] as ProdutoArte).visualizar();
+        }
+    } else {
+        console.log("\nNenhuma arte encontrada do artista \"" + artista + "\".");
+    }
     }
 }
