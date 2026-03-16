@@ -12,7 +12,7 @@ export function main(){
         console.log("1 - Cadastrar Produto                                ");
         console.log("2 - Listar os Produtos                               ");
         console.log("3 - Buscar Produto por Número                        ");
-        console.log("4 - Atualizar Produtos                            ");
+        console.log("4 - Atualizar Produtos                               ");
         console.log("5 - Apagar Produto                                   ");
         console.log("0 - Sair                                             ");
         console.log("*****************************************************");
