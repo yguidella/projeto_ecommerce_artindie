@@ -1,6 +1,18 @@
 import readlinesync = require("readline-sync");
+import { ProdutoArte } from "./src/model/ProdutoArte";
 
 export function main(){
+    //teste
+    let arte1 = new ProdutoArte();
+
+    arte1.numero = 1;
+    arte1.nome = "Operários";
+    arte1.preco = 7.500;
+    arte1.categoria = "Pintura a óleo";
+    arte1.artista = "Tarsila do Amaral";
+
+    arte1.visualizar();
+
 
     let opcao: number;
     let continuar: boolean = true;
