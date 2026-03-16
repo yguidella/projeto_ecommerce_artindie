@@ -6,7 +6,7 @@ export function main(){
     let continuar: boolean = true;
 
     do{
-        console.log("\n***************************************************");
+        console.log("\n*****************************************************");
         console.log("                  Galeria Artindie                   ");
         console.log("*****************************************************");
         console.log("1 - Cadastrar Produto                                ");
@@ -49,7 +49,7 @@ export function main(){
 
             default:
                 console.log("\nOpção inválida!");
-
+                
         }
 
     }while(continuar);
@@ -59,7 +59,7 @@ export function main(){
 main();
 
 function sobre(): void {
-    console.log("\n***************************************************");
+    console.log("\n*****************************************************");
     console.log("                                                     ");
     console.log("               Projeto Desenvolvido por:             ");
     console.log("          Yasmin Guidella - Quimera Criativa         ");
