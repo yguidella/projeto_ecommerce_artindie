@@ -6,7 +6,7 @@
 
 ## 📌 Descrição
 
-Projeto de aplicação console (CLI) desenvolvido em TypeScript com foco em prática de Programação Orientada a Objetos (POO) e organização em camadas (MVC manual). O sistema simula uma galeria de produtos artísticos chamada ArtIndie, permitindo o gerenciamento de itens via menu interativo no terminal.
+💡 Projeto de aplicação console (CLI) desenvolvido em TypeScript com foco em prática de Programação Orientada a Objetos (POO) e organização em camadas. O sistema simula uma galeria de produtos artísticos chamada ArtIndie, permitindo o gerenciamento completo de itens via menu interativo no terminal.
 
 ---
 
@@ -15,27 +15,42 @@ Projeto de aplicação console (CLI) desenvolvido em TypeScript com foco em prá
 * JavaScript
 * TypeScript
 * Node.js
+* readline-sync
 
 ---
 
 ## 📚 Funcionalidades
 
 * Cadastro de produtos artísticos
-* Listagem de produtos
+* Listagem de produtos cadastrados
 * Busca por número do produto
 * Atualização de produtos
 * Remoção de produtos
-* Menu interativo no terminal
+* Busca de produtos por artista
+* Menu interativo no terminal (CLI)
 
 ---
 
-## 🏗️ Arquitetura
+## 🏗️ Arquitetura do projeto
 
-O projeto segue uma estrutura simples baseada em MVC:
+Estrutura baseada em MVC simplificado:
 
-* **Controller** → responsável pelas regras e ações do sistema
-* **Model** → representação das entidades (Produto, ProdutoArte)
-* **Repository** → armazenamento e manipulação dos dados em memória
+* **Menu (Menu.ts)** → interface de interação com o usuário via terminal
+* **Controller (ProdutoController)** → regras de negócio e operações CRUD em memória
+* **Model (Produto / ProdutoArte)** → entidades do sistema com herança e encapsulamento
+* **Repository (ProdutoRepository)** → contrato (interface) das operações do sistema
+
+---
+
+## 📌 Conceitos aplicados
+
+* Programação Orientada a Objetos (POO)
+* Herança (Produto → ProdutoArte)
+* Encapsulamento (getters e setters)
+* Polimorfismo (método visualizar sobrescrito)
+* Interfaces em TypeScript
+* Estrutura em camadas (MVC simplificado)
+* Manipulação de dados em memória (array)
 
 ---
 
@@ -52,4 +67,13 @@ cd projeto_ecommerce_artindie
 npm install
 
 # Executar o projeto
-npm start
+npx ts-node Menu.ts
+
+# 🎯 Objetivo do projeto
+
+💡 Projeto desenvolvido para prática de lógica de programação, POO e estruturação de sistemas em TypeScript durante o processo de aprendizado back-end.
+
+# 👩‍💻 Desenvolvido por
+
+Yasmin Guidella
+GitHub: https://github.com/yguidella
