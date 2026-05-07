@@ -45,60 +45,80 @@ projeto_ecommerce_artindie/
 └── tsconfig.json                  # Configurações do compilador TS
 ```
 
-##🚀 Instalação e Execução
-Pré-requisitos
-Node.js instalado.
+## 🚀 Instalação e Execução
 
-Gerenciador de pacotes (NPM ou Yarn).
+### Pré-requisitos
+- Node.js instalado
+- Gerenciador de pacotes NPM ou Yarn
 
-Passo a Passo
-Clone o repositório:
+### Passo a Passo
 
-Bash
-git clone [https://github.com/yguidella/galeria-artindie.git](https://github.com/yguidella/galeria-artindie.git)
-Acesse a pasta do projeto:
+#### Clone o repositório
+```bash
+git clone https://github.com/yguidella/galeria-artindie.git
+```
 
-Bash
+#### Acesse a pasta do projeto
+```bash
 cd galeria-artindie
-Instale as dependências:
+```
 
-Bash
+#### Instale as dependências
+```bash
 npm install
-Execute a aplicação:
+```
 
-Bash
+#### Execute a aplicação
+```bash
 npm start
+```
 
-##💻 Exemplos de Uso
-Exemplo de interação no terminal para cadastrar uma nova obra:
+---
 
-Entrada:
+## 💻 Exemplos de Uso
 
+### Exemplo de interação no terminal para cadastrar uma nova obra
+
+#### Entrada
+```bash
 Entre com a opção desejada: 1
 Digite o número do produto: 101
 Digite o nome do produto: Noite Estrelada
 Digite o preço do produto: 1500.00
 Digite a categoria do produto: Pintura
 Digite o nome do artista: Van Gogh
-Saída esperada:
+```
 
-
+#### Saída Esperada
+```bash
 Produto "Noite Estrelada" cadastrado com sucesso!
+```
 
-##🛡️ Resiliência e Tratamento de Erros
-Validação de Existência: O sistema verifica se um produto existe antes de tentar atualizar ou deletar.
+---
 
-Feedback ao Usuário: Mensagens claras no console para buscas sem resultados.
+## 🛡️ Resiliência e Tratamento de Erros
 
-Segurança de Tipagem: Uso de classes abstratas e interfaces para evitar instâncias genéricas ou incompletas.
+- ✅ Validação de existência de produtos antes de atualizar ou deletar
+- ✅ Feedback claro ao usuário para buscas sem resultados
+- ✅ Segurança de tipagem utilizando classes abstratas e interfaces
+- ✅ Estrutura organizada para evitar instâncias genéricas ou incompletas
 
-##🎓 Aprendizados
-O desenvolvimento deste projeto permitiu consolidar:
+---
 
-Herança e Polimorfismo: Criação de classes especializadas a partir de uma base comum.
+## 🎓 Aprendizados
 
-Interfaces: Definição de padrões para a camada de controle.
+O desenvolvimento deste projeto permitiu consolidar conhecimentos em:
 
-Manipulação de Arrays: Uso eficiente de métodos como find e splice.
+- Herança e Polimorfismo
+- Interfaces em TypeScript
+- Manipulação de Arrays com métodos como `find()` e `splice()`
+- Estruturação de aplicações orientadas a objetos
+- Organização de lógica CRUD em camadas
 
-## Desenvolvido por Yasmin Guidella 📫 y.guidella8@outlook.com
+---
+
+## 👩‍💻 Desenvolvido por
+
+**Yasmin Guidella**  
+
+📫 y.guidella8@outlook.com
