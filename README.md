@@ -1,9 +1,10 @@
 # 🎨 Galeria Artindie
 
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![POO](https://img.shields.io/badge/Paradigma-POO-blue?style=for-the-badge)
-![License](https://img.shields.io/badge/license-ISC-green?style=for-the-badge)
+
 
 ## 📝 Descrição
 A **Galeria Artindie** é uma aplicação de console (CLI) desenvolvida para gerenciar o acervo de uma galeria de arte independente. O sistema permite o controle completo de produtos artísticos, oferecendo uma interface intuitiva para o gerenciamento de inventário, registro de artistas e categorias.
