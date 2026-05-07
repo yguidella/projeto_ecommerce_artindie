@@ -1,79 +1,103 @@
-# 🛍️ Projeto E-commerce ArtIndie
+# 🎨 Galeria Artindie
 
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![POO](https://img.shields.io/badge/Paradigma-POO-blue?style=for-the-badge)
+![License](https://img.shields.io/badge/license-ISC-green?style=for-the-badge)
 
-## 📌 Descrição
+## 📝 Descrição
+A **Galeria Artindie** é uma aplicação de console (CLI) desenvolvida para gerenciar o acervo de uma galeria de arte independente. O sistema permite o controle completo de produtos artísticos, oferecendo uma interface intuitiva para o gerenciamento de inventário, registro de artistas e categorias.
 
-💡 Projeto de aplicação console (CLI) desenvolvido em TypeScript com foco em prática de Programação Orientada a Objetos (POO) e organização em camadas. O sistema simula uma galeria de produtos artísticos chamada ArtIndie, permitindo o gerenciamento completo de itens via menu interativo no terminal.
+Este projeto resolve o problema de organização manual de itens de arte, permitindo buscas rápidas por número de registro ou pelo nome do artista criador.
 
----
+## ✨ Funcionalidades
+- ✅ **CRUD Completo**: Cadastrar, listar, buscar, atualizar e deletar produtos.
+- 🔍 **Busca Especializada**: Filtro de obras por nome do artista (case-insensitive).
+- 🖼️ **Gestão de Categorias**: Classificação organizada das artes por tipo.
+- 📊 **Visualização Detalhada**: Exibição formatada dos dados de cada obra no console.
 
-## 🚀 Tecnologias utilizadas
+## 🛠️ Tecnologias
+Abaixo, as principais ferramentas utilizadas no desenvolvimento:
 
-* JavaScript
-* TypeScript
-* Node.js
-* readline-sync
+| Tecnologia | Finalidade |
+| :--- | :--- |
+| **TypeScript** | Linguagem principal, trazendo tipagem estática e segurança. |
+| **Node.js** | Ambiente de execução para o JavaScript no console. |
+| **readline-sync** | Biblioteca para captura de entradas do usuário via terminal. |
+| **ts-node** | Execução direta de arquivos TypeScript. |
 
----
+## 📂 Estrutura do Projeto
+A organização segue os padrões de Clean Code e separação de responsabilidades:
 
-## 📚 Funcionalidades
+```🌳
+projeto_ecommerce_artindie/
+├── src/
+│   ├── controller/
+│   │   └── ProdutoController.ts   # Lógica de negócio e gestão do array
+│   ├── model/
+│   │   ├── Produto.ts             # Classe abstrata (Base)
+│   │   └── ProdutoArte.ts         # Classe especializada (Herança)
+│   └── repository/
+│       └── ProdutoRepository.ts   # Interface de contrato
+├── Menu.ts                        # Ponto de entrada (View/Interação)
+├── package.json                   # Dependências e scripts
+└── tsconfig.json                  # Configurações do compilador TS
+```
 
-* Cadastro de produtos artísticos
-* Listagem de produtos cadastrados
-* Busca por número do produto
-* Atualização de produtos
-* Remoção de produtos
-* Busca de produtos por artista
-* Menu interativo no terminal (CLI)
+##🚀 Instalação e Execução
+Pré-requisitos
+Node.js instalado.
 
----
+Gerenciador de pacotes (NPM ou Yarn).
 
-## 🏗️ Arquitetura do projeto
+Passo a Passo
+Clone o repositório:
 
-Estrutura baseada em MVC simplificado:
+Bash
+git clone [https://github.com/yguidella/galeria-artindie.git](https://github.com/yguidella/galeria-artindie.git)
+Acesse a pasta do projeto:
 
-* **Menu (Menu.ts)** → interface de interação com o usuário via terminal
-* **Controller (ProdutoController)** → regras de negócio e operações CRUD em memória
-* **Model (Produto / ProdutoArte)** → entidades do sistema com herança e encapsulamento
-* **Repository (ProdutoRepository)** → contrato (interface) das operações do sistema
+Bash
+cd galeria-artindie
+Instale as dependências:
 
----
-
-## 📌 Conceitos aplicados
-
-* Programação Orientada a Objetos (POO)
-* Herança (Produto → ProdutoArte)
-* Encapsulamento (getters e setters)
-* Polimorfismo (método visualizar sobrescrito)
-* Interfaces em TypeScript
-* Estrutura em camadas (MVC simplificado)
-* Manipulação de dados em memória (array)
-
----
-
-## ▶️ Como rodar o projeto
-
-```bash
-# Clonar repositório
-git clone https://github.com/yguidella/projeto_ecommerce_artindie
-
-# Entrar na pasta
-cd projeto_ecommerce_artindie
-
-# Instalar dependências
+Bash
 npm install
+Execute a aplicação:
 
-# Executar o projeto
-npx ts-node Menu.ts
+Bash
+npm start
 
-# 🎯 Objetivo do projeto
+##💻 Exemplos de Uso
+Exemplo de interação no terminal para cadastrar uma nova obra:
 
-💡 Projeto desenvolvido para prática de lógica de programação, POO e estruturação de sistemas em TypeScript durante o processo de aprendizado back-end.
+Entrada:
 
-# 👩‍💻 Desenvolvido por
+Entre com a opção desejada: 1
+Digite o número do produto: 101
+Digite o nome do produto: Noite Estrelada
+Digite o preço do produto: 1500.00
+Digite a categoria do produto: Pintura
+Digite o nome do artista: Van Gogh
+Saída esperada:
 
-Yasmin Guidella
-GitHub: https://github.com/yguidella
+
+Produto "Noite Estrelada" cadastrado com sucesso!
+
+##🛡️ Resiliência e Tratamento de Erros
+Validação de Existência: O sistema verifica se um produto existe antes de tentar atualizar ou deletar.
+
+Feedback ao Usuário: Mensagens claras no console para buscas sem resultados.
+
+Segurança de Tipagem: Uso de classes abstratas e interfaces para evitar instâncias genéricas ou incompletas.
+
+##🎓 Aprendizados
+O desenvolvimento deste projeto permitiu consolidar:
+
+Herança e Polimorfismo: Criação de classes especializadas a partir de uma base comum.
+
+Interfaces: Definição de padrões para a camada de controle.
+
+Manipulação de Arrays: Uso eficiente de métodos como find e splice.
+
+## Desenvolvido por Yasmin Guidella 📫 y.guidella8@outlook.com
